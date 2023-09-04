@@ -13,13 +13,19 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  # 状态管理
-  flutter_riverpod: 2.3.10 # 注：Riverpod 官网引入的插件是 flutter_riverpod，而不是 riverpod，后者引入不了 ProviderScope
+  # 状态管理 注：Riverpod 官网引入的插件是 flutter_riverpod，而不是 riverpod，后者引入不了 ProviderScope
+  flutter_riverpod: 2.3.10
+  # riverpod_generator 的一个附带包，提供注解
+  riverpod_annotation: 2.1.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  # 用于运行代码生成器的工具
+  build_runner: 2.4.6
+  # flutter_riverpod 的一个副包，旨在通过依赖代码，生成一种不同的语法来定义提供者，没有任何延迟
+  riverpod_generator: 2.3.1
   flutter_lints: ^2.0.0
 
 flutter:

@@ -17,25 +17,40 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF6F7F9),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 17),
-        child: Column(
-          children: [
-            SizedBox(height: MediaQuery.of(context).padding.top),
-            SizedBox(height: 15),
-            AllenBtn(
-              name: "官方案例",
-              onTap: () {},
-            ),
-            SizedBox(height: 15),
-            AllenBtn(
-              name: '基本使用案例',
-              onTap: () {
-                RouteUtil.push(routeName: AppRoutes.base_use_demo);
-              },
-            ),
-          ],
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 17),
+        child: _mainColumn(context),
       ),
+    );
+  }
+
+  Widget _mainColumn(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(height: MediaQuery.of(context).padding.top),
+        const SizedBox(height: 15),
+        AllenBtn(
+          name: '基本使用案例 - 计时器',
+          onTap: () {
+            RouteUtil.push(routeName: AppRoutes.base_use_demo_01);
+          },
+        ),
+        const SizedBox(height: 15),
+        //
+        AllenBtn(
+          name: '基本使用案例 - 修改对象',
+          onTap: () {
+            RouteUtil.push(routeName: AppRoutes.base_use_demo_02);
+          },
+        ),
+        const SizedBox(height: 15),
+        //
+        AllenBtn(
+          name: '代码自动生成（官方）案例',
+          onTap: () {
+            RouteUtil.push(routeName: AppRoutes.auto_generator_demo);
+          },
+        ),
+      ],
     );
   }
 }
