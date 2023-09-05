@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
         const SizedBox(height: 15),
         //
         AllenBtn(
-          name: '基本使用案例 - 修改对象',
+          name: '基本使用案例 - 修改对象属性',
           onTap: () {
             RouteUtil.push(routeName: AppRoutes.base_use_demo_02);
           },
@@ -47,9 +47,18 @@ class HomePage extends StatelessWidget {
         AllenBtn(
           name: '代码自动生成（官方）案例',
           onTap: () {
-            RouteUtil.push(routeName: AppRoutes.auto_generator_demo);
+            RouteUtil.push(routeName: AppRoutes.auto_generator_demo_01);
           },
         ),
+        const SizedBox(height: 15),
+        //
+        AllenBtn(
+          name: '代码自动生成，模拟修改用户信息',
+          onTap: () {
+            RouteUtil.push(routeName: AppRoutes.auto_generator_demo_02);
+          },
+        ),
+        const SizedBox(height: 15),
       ],
     );
   }

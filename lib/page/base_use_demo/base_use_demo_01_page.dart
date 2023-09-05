@@ -12,7 +12,8 @@ import 'package:riverpod_demo/widgets/allen_btn.dart';
 class BaseUseDemo01Page extends ConsumerWidget {
   BaseUseDemo01Page({super.key});
 
-  // 创建提供者
+  // 创建提供者，如果要监听改变，需要用到继承自 AlwaysAliveProviderBase 的 Providers，
+  // StateNotifier 是不可变的
   final baseUseStateProvider1 = StateProvider((ref) => 0);
 
   @override

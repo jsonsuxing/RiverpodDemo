@@ -5,7 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 // 第一步：执行命令 dart run build_runner watch
 
 // 第二步：先写 xxx.g.dart 文件名称，这个自定义，写的时候会报错，这个不用管，和 json_serializable 插件相似
-part 'auto_generator_demo_page.g.dart';
+part 'auto_generator_demo_01_page.g.dart';
 
 // ------------------------------------------------------
 // author：苏醒
@@ -17,6 +17,9 @@ part 'auto_generator_demo_page.g.dart';
 // 提供者通过在函数中标注 @riverpod 来定义，必须为顶级类型，
 // 其中的入参刚开始可以随便定义一个类型比如 String，dart 监听到代码改变时会生成 xxx.g.dart 文件，在 xxx.g.dart 中 有一个 typedef 的类型，就是
 // 其入参，取的是 方法名+Ref，所以可以在定义提供者的时候直接拿方法名加 Ref 即可
+// 注：在生成代码冲突的时候，执行
+// flutter pub run build_runner build --delete-conflicting-outputs
+// 会删除原来的代码重新生成新的 xxx.g.dart 文件
 @riverpod
 String label(LabelRef ref) {
   return 'Hello World';
@@ -25,8 +28,8 @@ String label(LabelRef ref) {
 // 特别提醒：
 // 生成  xxx.g.dart 文件之后，要关闭 dart run build_runner watch（Ctrl + C），否则一直监听着代码，会把生成的 xxx.g.dart 文件删除
 
-class AutoGeneratorDemoPage extends ConsumerWidget {
-  const AutoGeneratorDemoPage({super.key});
+class AutoGeneratorDemo01Page extends ConsumerWidget {
+  const AutoGeneratorDemo01Page({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
