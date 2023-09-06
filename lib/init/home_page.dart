@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_demo/page/official_demo/official_counter_demo_state.dart';
 import 'package:riverpod_demo/route/app_routes.dart';
 import 'package:riverpod_demo/route/route_util.dart';
 import 'package:riverpod_demo/widgets/allen_btn.dart';
@@ -28,6 +30,16 @@ class HomePage extends StatelessWidget {
       children: [
         SizedBox(height: MediaQuery.of(context).padding.top),
         const SizedBox(height: 15),
+
+        //
+        AllenBtn(
+          name: '官方计数器案例',
+          onTap: () {
+            RouteUtil.push(routeName: AppRoutes.official_counter_demo);
+          },
+        ),
+        const SizedBox(height: 15),
+        //
         AllenBtn(
           name: '基本使用案例 - 计时器',
           onTap: () {
