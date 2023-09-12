@@ -15,7 +15,7 @@ class BaseUseDemo02Page extends ConsumerWidget {
   BaseUseDemo02Page({super.key});
 
   // 创建提供者
-  final baseUseStateProvider1 = StateNotifierProvider<BaseUseStateProvider, BaseUseDemo02State>(
+  final baseUseStateProvider1 = StateNotifierProvider.autoDispose<BaseUseStateProvider, BaseUseDemo02State>(
     (ref) => BaseUseStateProvider(),
   );
 

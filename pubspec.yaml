@@ -17,6 +17,7 @@ dependencies:
   flutter_riverpod: 2.3.10
   # riverpod_generator 的一个附带包，提供注解
   riverpod_annotation: 2.1.4
+  freezed_annotation: 2.4.1
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +28,7 @@ dev_dependencies:
   # flutter_riverpod 的一个副包，旨在通过依赖代码，生成一种不同的语法来定义提供者，没有任何延迟
   riverpod_generator: 2.3.1
   flutter_lints: ^2.0.0
+  freezed: ^2.4.1
 
 flutter:
 

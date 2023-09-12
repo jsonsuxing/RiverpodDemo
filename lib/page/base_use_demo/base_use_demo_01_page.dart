@@ -14,7 +14,7 @@ class BaseUseDemo01Page extends ConsumerWidget {
 
   // 创建提供者，如果要监听改变，需要用到继承自 AlwaysAliveProviderBase 的 Providers，
   // StateNotifier 是不可变的
-  final baseUseStateProvider1 = StateProvider((ref) => 0);
+  final baseUseStateProvider1 = StateProvider.autoDispose((ref) => 0);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

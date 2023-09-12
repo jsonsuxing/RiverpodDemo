@@ -6,19 +6,19 @@ part of 'auto_generator_demo_02_page.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$userHash() => r'c5af2ed95b1f2b4edb00abb9cb2594f34a140bed';
+String _$userStateHash() => r'f608d893469c8279195e4f3b96b791bb5ec738fe';
 
-/// See also [User].
-@ProviderFor(User)
-final userProvider = AutoDisposeNotifierProvider<User, User>.internal(
-  User.new,
-  name: r'userProvider',
+/// See also [UserState].
+@ProviderFor(UserState)
+final userStateProvider = AutoDisposeNotifierProvider<UserState, User>.internal(
+  UserState.new,
+  name: r'userStateProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$userHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$userStateHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$User = AutoDisposeNotifier<User>;
+typedef _$UserState = AutoDisposeNotifier<User>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member
