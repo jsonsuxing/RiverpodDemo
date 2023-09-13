@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'user.freezed.dart';
+part 'user.g.dart';
 
 // ------------------------------------------------------
 // author：Allen
@@ -13,4 +14,6 @@ class User with _$User {
     @Default('默认用户名') String name,
     @Default(18) int age,
   }) = _User;
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
